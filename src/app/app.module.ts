@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { BottomSheetModule } from '../../projects/bottom-sheet/src/lib/bottom-sheet.module';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BottomSheetModule
   ],
   providers: [],
   bootstrap: [AppComponent]

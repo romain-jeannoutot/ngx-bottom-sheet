@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "bottom-sheet": [
+        "dist/bottom-sheet"
+      ],
+      "bottom-sheet/*": [
+        "dist/bottom-sheet/*"
+      ]
+    }
   }
 }
