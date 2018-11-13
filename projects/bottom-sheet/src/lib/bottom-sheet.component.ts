@@ -17,8 +17,17 @@ export class BottomSheetComponent implements AfterViewInit {
   @ViewChild('element') element: ElementRef;
   @ViewChild('content') content: ElementRef;
 
+  private currentY = 0;
+
   constructor() { }
 
-  ngAfterViewInit(): void { }
+  ngAfterViewInit(): void {
+    this.currentY = window.innerHeight - 40;
+    this.move();
+  }
+
+  private move(): void {
+    this.element.nativeElement.style.transform = `translate3d(0px, ${this.currentY}px, 0)`;
+  }
 
 }
