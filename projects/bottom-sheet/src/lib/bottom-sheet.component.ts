@@ -21,6 +21,9 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class BottomSheetComponent implements AfterViewInit {
 
+  private readonly bottomOffset = 40;
+  private readonly topOffset = 60;
+
   @ViewChild('element') element: ElementRef;
   @ViewChild('content') content: ElementRef;
 
@@ -35,7 +38,7 @@ export class BottomSheetComponent implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    this.currentY = window.innerHeight - 40;
+    this.currentY = window.innerHeight - this.bottomOffset;
     this.offsetY = this.currentY;
     this.move();
   }
@@ -77,19 +80,19 @@ export class BottomSheetComponent implements AfterViewInit {
     if (event instanceof MouseEvent) {
       if (this.lastPos < event.clientY) {
         // bottom position
-        pos = window.innerHeight - 40;
+        pos = window.innerHeight - this.bottomOffset;
       } else {
         // top position
-        pos = window.innerHeight - this.content.nativeElement.clientHeight - 60;
+        pos = window.innerHeight - this.content.nativeElement.clientHeight - this.topOffset;
       }
     }
     if (event instanceof TouchEvent) {
       if (this.lastPos < event.changedTouches[0].clientY) {
         // bottom position
-        pos = window.innerHeight - 40;
+        pos = window.innerHeight - this.bottomOffset;
       } else {
         // top position
-        pos = window.innerHeight - this.content.nativeElement.clientHeight - 60;
+        pos = window.innerHeight - this.content.nativeElement.clientHeight - this.topOffset;
       }
     }
 
