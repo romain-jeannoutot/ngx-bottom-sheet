@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'ngx-bottom-sheet',
@@ -23,6 +23,8 @@ export class BottomSheetComponent implements AfterViewInit {
 
   private readonly bottomOffset = 40;
   private readonly topOffset = 60;
+
+  @Input() offset = 0;
 
   @ViewChild('element') element: ElementRef;
   @ViewChild('content') content: ElementRef;
@@ -111,7 +113,7 @@ export class BottomSheetComponent implements AfterViewInit {
   }
 
   private move(): void {
-    this.element.nativeElement.style.transform = `translate3d(0px, ${this.currentY}px, 0)`;
+    this.element.nativeElement.style.transform = `translate3d(0px, ${this.currentY - this.offset}px, 0)`;
   }
 
 }
