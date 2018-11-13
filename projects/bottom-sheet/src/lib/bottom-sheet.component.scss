@@ -1,0 +1,16 @@
+div.element {
+  border: 1px solid lightgray;
+  border-radius: 12px 12px 0px 0px;
+  padding: 18px;
+  position: fixed;
+  width: 100%;
+  min-height: 200vh;
+
+  div.handle {
+    height: 6px;
+    background-color: #444444;
+    width: 60px;
+    margin: 0 auto 18px auto;
+    border-radius: 3px;
+  }
+}
