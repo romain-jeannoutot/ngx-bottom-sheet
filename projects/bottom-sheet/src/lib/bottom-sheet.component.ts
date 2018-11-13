@@ -13,7 +13,7 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular
          #element>
       <div class="handle"></div>
       <div class="content" #content>
-        <h4>Hello Ngx Bottom Sheet World!</h4>
+        <ng-content></ng-content>
       </div>
     </div>
   `,
