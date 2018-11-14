@@ -1,27 +1,47 @@
-# NgxBottomSheet
+# Ngx Bottom Sheet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.5.
+A basic Angular module to display bottom sheet.
 
-## Development server
+See a demo at: https://ngx-bottom-sheet.ranout.xyz
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Table of contents
+=================
 
-## Code scaffolding
+  * [Install](#install)
+  * [Usage](#usage)
+  * [Component](#component)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Install
 
-## Build
+Install the module via npm:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    npm i --save @ranout/ngx-bottom-sheet
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### Step 1: Import the BottomSheetModule:
 
-## Running end-to-end tests
+```js
+import { BottomSheetModule } from '@ranout/ngx-bottom-sheet';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@NgModule({
+  imports: [BottomSheetModule]
+})
+export class AppModule { }
+```
 
-## Further help
+##### Step 2: Place the ngx-bottom-sheet component in your page:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+	<ngx-bottom-sheet>
+	  <!-- place your bottom sheet content here -->
+	</ngx-bottom-sheet>
+
+Enjoy :)
+
+## Component
+
+##### Offset
+
+You can define the `offset` attribute on `<ngx-bottom-sheet>` component to shift up the bottom sheet of number pixels you want.
+	
+	<ngx-bottom-sheet offset="20"> ... </ngx-bottom-sheet>
