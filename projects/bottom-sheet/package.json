@@ -1,8 +1,16 @@
 {
-  "name": "bottom-sheet",
-  "version": "0.0.1",
+  "name": "@ranout/ngx-bottom-sheet",
+  "version": "1.0.0",
+  "description": "A basic Angular module to display bottom sheet",
+  "keywords": ["angular", "ng", "ngx", "bottom sheet", "angular bottom sheet", "ng bottom sheet", "ngx bottom sheet"],
+  "homepage": "https://github.com/romain-jeannoutot/ngx-bottom-sheet#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romain-jeannoutot/ngx-bottom-sheet.git"
+  },
+  "author": "Romain Jeannoutot",
+  "private": false,
   "peerDependencies": {
-    "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
   }
 }
