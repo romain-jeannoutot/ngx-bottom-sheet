@@ -30,11 +30,12 @@ import { BottomSheetModule } from '@ranout/ngx-bottom-sheet';
 export class AppModule { }
 ```
 
-##### Step 2: Place the ngx-bottom-sheet component in your page:
+##### Step 2: Place the ngx-bottom-sheet component at the top of your page:
 
 	<ngx-bottom-sheet>
 	  <!-- place your bottom sheet content here -->
 	</ngx-bottom-sheet>
+	...
 
 Enjoy :)
 
