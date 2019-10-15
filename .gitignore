@@ -40,5 +40,3 @@ Thumbs.db
 
 # Firebase
 .firebase/
-.firebaserc
-firebase.json
